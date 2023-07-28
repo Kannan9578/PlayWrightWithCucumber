@@ -1,0 +1,31 @@
+{
+  "name": "usingcucumberjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run-tests": "npx cucumber-js -p test_runner -f @cucumber/pretty-formatter",
+    "run-after-tests": "node ./htmlReportGenerator.js",
+    "test": "npm run run-tests || npm run run-after-tests",
+    "posttest": "node ./htmlReportGenerator.js"
+
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.3.0",
+    "@cucumber/pretty-formatter": "^1.0.0",
+    "@playwright/test": "^1.36.2",
+    "playwright": "^1.35.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@types/cucumber-html-reporter": "^5.0.1",
+    "chai": "^4.3.7",
+    "cucumber-html-reporter": "^7.1.0",
+    "prettier": "^3.0.0",
+    "ts-node": "^10.9.1"
+  }
+}

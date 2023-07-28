@@ -1,0 +1,315 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "validate-login-page-functionality;user-is-able-to-login-with-valid-credintial",
+        "keyword": "Scenario Outline",
+        "line": 10,
+        "name": "User is able to login with valid credintial",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 195500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "goto login Page",
+            "match": {
+              "location": "src\\main\\steps\\login.step.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10977899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Enter the \"standard_user\" and \"secret_sauce\"",
+            "match": {
+              "location": "src\\main\\steps\\login.step.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 721304800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "click on Login button",
+            "match": {
+              "location": "src\\main\\steps\\login.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 204138399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see Home Page with title \"Products\"",
+            "match": {
+              "location": "src\\main\\steps\\login.step.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21811399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 95699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validate-login-page-functionality;user-is-not-able-to-login-with-logged-out-user",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "User is not able to login with logged out user",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 99799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "goto login Page",
+            "match": {
+              "location": "src\\main\\steps\\login.step.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1190100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "Enter the \"locked_out_user\" and \"secret_sauce\"",
+            "match": {
+              "location": "src\\main\\steps\\login.step.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 111111799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "click on Login button",
+            "match": {
+              "location": "src\\main\\steps\\login.step.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64215599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should see error message \"Epic sadface: Sorry, this user has been locked out.\"",
+            "match": {
+              "location": "src\\main\\steps\\login.step.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4214800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 74599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "validate-login-page-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Validate Login Page functionality",
+    "tags": [],
+    "uri": "src\\tests\\features\\logintest.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "validate-product-page-functionality;user-is-able-to-select-product",
+        "keyword": "Scenario Outline",
+        "line": 9,
+        "name": "User is able to select Product",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 112800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Go to productPage",
+            "match": {
+              "location": "src\\main\\steps\\product.step.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1220200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Select a Product \"Sauce Labs Backpack\" to cart",
+            "match": {
+              "location": "src\\main\\steps\\product.step.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 770457599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see product counts 1 in cart icon",
+            "match": {
+              "location": "src\\main\\steps\\product.step.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11632100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 70299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validate-product-page-functionality;user-is-able-to-select-product",
+        "keyword": "Scenario Outline",
+        "line": 10,
+        "name": "User is able to select Product",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 511299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Go to productPage",
+            "match": {
+              "location": "src\\main\\steps\\product.step.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1731000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Select a Product \"Sauce Labs Onesie\" to cart",
+            "match": {
+              "location": "src\\main\\steps\\product.step.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 400712999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see product counts 12 in cart icon",
+            "match": {
+              "location": "src\\main\\steps\\product.step.ts:16"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 13702800,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m12\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at Proxy.<anonymous> (D:\\Kannan_Test_Projects\\Playwright_Projects\\UsingCucumberJS\\node_modules\\@playwright\\test\\lib\\matchers\\expect.js:165:37)\n    at ProductPage.isProductAddedInCart (D:\\Kannan_Test_Projects\\Playwright_Projects\\UsingCucumberJS\\src\\main\\pages\\products.ts:17:53)\n    at World.<anonymous> (D:\\Kannan_Test_Projects\\Playwright_Projects\\UsingCucumberJS\\src\\main\\steps\\product.step.ts:19:5)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 207699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "validate-product-page-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Validate product Page functionality",
+    "tags": [],
+    "uri": "src\\tests\\features\\product.feature"
+  }
+]
